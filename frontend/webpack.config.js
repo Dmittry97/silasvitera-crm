@@ -21,10 +21,13 @@ module.exports = {
   },
   devServer: {
     port: 5173,
-    historyApiFallback: true,
+    historyApiFallback: { index: '/silasvitera/' },
     proxy: { 
-      '/api': { target: 'http://localhost:4000', changeOrigin: true },
-      '/photos': { target: 'http://localhost:4000', changeOrigin: true }
+      '/silasvitera/api': { 
+        target: 'http://localhost:4000',
+        pathRewrite: { '^/silasvitera/api': '/api' },
+        changeOrigin: true 
+      }
     },
     hot: true,
   },
