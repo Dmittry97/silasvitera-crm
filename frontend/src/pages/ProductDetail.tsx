@@ -76,7 +76,7 @@ export default function ProductDetail() {
       id: product._id,
       title: product.title,
       price: product.price,
-      image: product.mainImage ? `/photos/${product.mainImage}` : undefined,
+      image: product.mainImage ? `/api/photos/${product.mainImage}` : undefined,
       size: selectedSize,
       quantity: 1,
     };
@@ -111,9 +111,9 @@ export default function ProductDetail() {
 
   // Build images array from new structure
   const allImages: string[] = [];
-  if (product.mainImage) allImages.push(`/photos/${product.mainImage}`);
-  if (product.backImage) allImages.push(`/photos/${product.backImage}`);
-  if (product.otherImages) allImages.push(...product.otherImages.map(img => `/photos/${img}`));
+  if (product.mainImage) allImages.push(`/api/photos/${product.mainImage}`);
+  if (product.backImage) allImages.push(`/api/photos/${product.backImage}`);
+  if (product.otherImages) allImages.push(...product.otherImages.map(img => `/api/photos/${img}`));
   
   const displayImages = allImages;
 

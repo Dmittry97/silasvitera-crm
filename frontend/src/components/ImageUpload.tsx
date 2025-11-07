@@ -35,7 +35,7 @@ export default function ImageUpload({ label, category, multiple = false, onUploa
       const filenames = response.data.files.map((f: any) => f.filename);
       
       // Create preview URLs
-      const previewUrls = filenames.map((name: string) => `/photos/${name}`);
+      const previewUrls = filenames.map((name: string) => `/api/photos/${name}`);
       setPreview(multiple ? [...preview, ...previewUrls] : previewUrls);
       
       onUpload(filenames);
@@ -50,7 +50,7 @@ export default function ImageUpload({ label, category, multiple = false, onUploa
   const removeImage = (index: number) => {
     const newPreview = preview.filter((_, i) => i !== index);
     setPreview(newPreview);
-    onUpload(newPreview.map(url => url.replace('/photos/', '')));
+    onUpload(newPreview.map(url => url.replace('/api/photos/', '')));
   };
 
   return (

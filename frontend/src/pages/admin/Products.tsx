@@ -175,7 +175,7 @@ export default function AdminProducts() {
                       <div className="aspect-[3/4] bg-neutral-100 relative">
                         {product.mainImage && (
                           <img
-                            src={`/photos/${product.mainImage}`}
+                            src={`/api/photos/${product.mainImage}`}
                             alt={product.title}
                             className="w-full h-full object-cover"
                           />
