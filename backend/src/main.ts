@@ -9,7 +9,6 @@ import { join } from 'path';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  app.setGlobalPrefix('api', { exclude: ['/getsviter'] });
   app.useGlobalPipes(new ValidationPipe());
   app.enableCors();
   
