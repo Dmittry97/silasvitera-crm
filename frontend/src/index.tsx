@@ -6,7 +6,7 @@ import './index.css';
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/silasvitera">
       <App />
     </BrowserRouter>
   </React.StrictMode>
