@@ -3,7 +3,7 @@ import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { LoginUserDto } from './dto/login-user.dto';
 
-@Controller('/users')
+@Controller(' /users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
@@ -17,7 +17,7 @@ export class UsersController {
     const { user, generatedPassword } = await this.usersService.create(createUserDto);
     
     return {
-      id: user._id,
+      id: (user as any)._id,
       email: user.email,
       telegram: user.telegram,
       generatedPassword,
@@ -33,7 +33,7 @@ export class UsersController {
     }
 
     return {
-      id: user._id,
+      id: (user as any)._id,
       email: user.email,
       telegram: user.telegram,
       firstName: user.firstName,
@@ -56,7 +56,7 @@ export class UsersController {
     }
 
     return {
-      id: user._id,
+      id: (user as any)._id,
       email: user.email,
       telegram: user.telegram,
       firstName: user.firstName,
@@ -79,7 +79,7 @@ export class UsersController {
     }
 
     return {
-      id: updatedUser._id,
+      id: (updatedUser as any)._id,
       email: updatedUser.email,
       telegram: updatedUser.telegram,
       firstName: updatedUser.firstName,
