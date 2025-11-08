@@ -264,7 +264,7 @@ export default function AdminDashboard() {
                   {product.mainImage && (
                     <div className="w-16 h-16 bg-neutral-100 rounded-lg overflow-hidden flex-shrink-0">
                       <img
-                        src={`/api/photos/${product.mainImage}`}
+                        src={`/silasvitera/api/photos/${product.mainImage}`}
                         alt={product.title}
                         className="w-full h-full object-cover"
                       />

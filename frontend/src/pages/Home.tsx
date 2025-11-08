@@ -174,8 +174,8 @@ export default function Home() {
                 </h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
                   {categoryProducts.map(p => {
-                    const mainImg = p.mainImage ? `/api/photos/${p.mainImage}` : undefined;
-                    const backImg = p.backImage ? `/api/photos/${p.backImage}` : undefined;
+                    const mainImg = p.mainImage ? `/silasvitera/api/photos/${p.mainImage}` : undefined;
+                    const backImg = p.backImage ? `/silasvitera/api/photos/${p.backImage}` : undefined;
                     const displayImages = [mainImg, backImg].filter(Boolean) as string[];
                     return (
                       <ProductCard 

@@ -22,9 +22,9 @@ export default function ImageUploadDnD({ mainImage, backImage, otherImages, onUp
   const [dragOverCategory, setDragOverCategory] = useState<ImageCategory | null>(null);
 
   const images: ImageItem[] = [
-    ...(mainImage ? [{ url: `/api/photos/${mainImage}`, filename: mainImage, category: 'main' as ImageCategory }] : []),
-    ...(backImage ? [{ url: `/api/photos/${backImage}`, filename: backImage, category: 'back' as ImageCategory }] : []),
-    ...(otherImages || []).map(img => ({ url: `/api/photos/${img}`, filename: img, category: 'other' as ImageCategory })),
+    ...(mainImage ? [{ url: `/silasvitera/api/photos/${mainImage}`, filename: mainImage, category: 'main' as ImageCategory }] : []),
+    ...(backImage ? [{ url: `/silasvitera/api/photos/${backImage}`, filename: backImage, category: 'back' as ImageCategory }] : []),
+    ...(otherImages || []).map(img => ({ url: `/silasvitera/api/photos/${img}`, filename: img, category: 'other' as ImageCategory })),
   ];
 
   const handleUpload = async (files: FileList, category: ImageCategory) => {
